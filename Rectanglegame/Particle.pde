@@ -15,14 +15,14 @@ class Particle extends Entity {
   }
 
   void update() {
-//    println(y);
+    //    println(y);
     x += xSpeed;
     y += ySpeed;
   }
-  
+
   void display() {
     fill(palette[5]);
-    rect(x, y, w, h);  
+    rect(x, y, w, h);
   }
 }
 

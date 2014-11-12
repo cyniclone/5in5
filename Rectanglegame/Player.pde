@@ -20,18 +20,18 @@ class Player extends Entity {
       bullets.add(b);
     }
   }
-  
+
   void update() {
     // Update position
     x = constrain(mouseX - w/2, 0, width - w);
     y = constrain(mouseY, height-CONSTRAINTOP, height-CONSTRAINBOTTOM - h);
-    
-    
+
+
     // Update bullet coordinates
     for (int i = 0; i < bullets.size (); i++) {
       bullets.get(i).update();
     }
-    
+
     //Remove out of bounds bullets
     for (int i = 0; i < bullets.size (); i++) {
       if (bullets.get(i).x < 0 || bullets.get(i).x > width || 
@@ -40,12 +40,12 @@ class Player extends Entity {
       }
     }
   }
-  
+
   void display() {
     fill(palette[1]);
     rect(x, y, w, h);  
-    
-        //Display bullets
+
+    //Display bullets
     for (int i = 0; i < bullets.size (); i++) {
       bullets.get(i).display();
     }

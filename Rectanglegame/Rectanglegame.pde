@@ -12,6 +12,7 @@ color [] palette = {
   #CD75E8
 };
 
+
 int THRESHOLD = 50;
 int score;
 
